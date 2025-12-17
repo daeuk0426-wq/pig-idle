@@ -1,6 +1,6 @@
 # 돼지 키우는 중입니다 (Pig Idle)
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/daeuk0426-wq/pig-idle)
 
 ## Overview
 
@@ -123,7 +123,7 @@ Or manually:
 1. `bun build`
 2. `wrangler deploy`
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/daeuk0426-wq/pig-idle)
 
 **Free tier supported**. Custom domain via Wrangler dashboard.
 
