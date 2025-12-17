@@ -4,7 +4,7 @@
  */
  {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "vite-reference",
+	"name": "pig-idle-game-kyatbfgliumsgc5xqbia8",
 	"main": "worker/index.ts",
 	"compatibility_date": "2025-04-24",
 	"assets": {
