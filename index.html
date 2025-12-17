@@ -1,115 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>���지 키우는 중입니다 (Pig Idle)</title>
-    <link rel="stylesheet" href="style.css">
+    <title>돼지 키우는 중입니다 (Pig Idle)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="game-container">
-        <!-- 오버레이 메시지 -->
-        <div id="overlay-message" class="hidden"></div>
-        <!-- 헤더: 게임 정�� -->
-        <header id="hud">
-            <div class="hud-item">
-                <span id="nickname-display">닉네임</span>
-                <span id="admin-mode-indicator" class="hidden">👑 ADMIN</span>
-            </div>
-            <div class="hud-item">
-                <span>스테이지</span>
-                <span id="stage-display">1</span>
-            </div>
-            <div class="hud-item">
-                <span>레벨</span>
-                <span id="level-display">1</span>
-            </div>
-            <div class="hud-item">
-                <span>공격력</span>
-                <span id="attack-display">1</span>
-            </div>
-            <div class="hud-item">
-                <span>골드</span>
-                <span id="gold-display">0</span>
-            </div>
-        </header>
-        <!-- ��앙: 전투 영역 -->
-        <main id="battle-arena">
-            <div id="pig-container">
-                <div id="pig">🐷</div>
-                <div id="attack-effect" class="hidden">���</div>
-            </div>
-            <div id="enemy-container">
-                <div id="enemy-name">슬���임</div>
-                <div id="enemy-hp-bar-container">
-                    <div id="enemy-hp-bar"></div>
-                </div>
-                <div id="enemy-hp-text">10 / 10</div>
-                <div id="damage-text-container"></div>
-            </div>
-        </main>
-        <!-- ��단: 컨트롤 버튼 -->
-        <footer id="controls">
-            <button id="battle-btn" class="control-btn">전투 시작</button>
-            <button id="upgrade-btn" class="control-btn">강화</button>
-            <button id="skin-change-btn" class="control-btn">외형 변경</button>
-            <button id="nickname-change-btn" class="control-btn">닉네임 변경</button>
-            <button id="admin-panel-btn" class="control-btn admin-only hidden">관리자 패널</button>
-            <button id="stage-jump-btn" class="control-btn admin-only hidden">스테이지 이동</button>
-        </footer>
-    </div>
-    <!-- 닉네임 설정 ��달 -->
-    <div id="nickname-modal" class="modal-overlay hidden">
-        <div class="modal-content">
-            <h2>닉네임 설정</h2>
-            <p>사용할 닉네임을 입력해주세요.</p>
-            <input type="text" id="nickname-input" placeholder="닉네임" maxlength="10">
-            <button id="nickname-submit-btn">확인</button>
-        </div>
-    </div>
-    <!-- 외형 변경 모달 -->
-    <div id="skin-modal" class="modal-overlay hidden">
-        <div class="modal-content">
-            <h2>외형 변경</h2>
-            <div id="skin-selection-container">
-                <!-- 스킨 아이템은 JS로 동적 생성 -->
-            </div>
-            <button id="skin-modal-close-btn">닫기</button>
-        </div>
-    </div>
-    <!-- 관리자 패널 모달 -->
-    <div id="admin-modal" class="modal-overlay hidden">
-        <div class="modal-content">
-            <h2>👑 관리자 패널</h2>
-            <div class="admin-control">
-                <label for="admin-gold-input">골드 수정</label>
-                <input type="number" id="admin-gold-input">
-                <button id="admin-gold-submit">적용</button>
-            </div>
-            <div class="admin-control">
-                <label for="admin-attack-input">공격력 수정</label>
-                <input type="number" id="admin-attack-input">
-                <button id="admin-attack-submit">적용</button>
-            </div>
-            <div class="admin-control">
-                <label for="admin-stage-input">스테이지 변경</label>
-                <input type="number" id="admin-stage-input">
-                <button id="admin-stage-submit">적용</button>
-            </div>
-            <button id="admin-modal-close-btn">닫기</button>
-        </div>
-    </div>
-    <!-- 방치 보상 모달 -->
-    <div id="offline-reward-modal" class="modal-overlay hidden">
-        <div class="modal-content">
-            <h2>방치 보상</h2>
-            <p id="offline-reward-text">0분 동��� 방치하여 0 골드를 획득했습니다!</p>
-            <button id="offline-reward-close-btn">확인</button>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
